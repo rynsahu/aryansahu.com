@@ -1,0 +1,35 @@
+export function pointer(pointerEl) {
+  const currentPosition = { x: 0, y: 0 };
+  const targetPosition = { x: 0, y: 0 };
+  let isLerping = false;
+
+  function lerp() {
+    const dx = targetPosition.x - currentPosition.x;
+    const dy = targetPosition.y - currentPosition.y;
+
+    currentPosition.x += dx * 0.1;
+    currentPosition.y += dy * 0.1;
+
+    pointerEl.style.setProperty('--x', currentPosition.x);
+    pointerEl.style.setProperty('--y', currentPosition.y);
+
+    if (currentPosition.x / targetPosition.x > 0.999 && currentPosition.y / targetPosition.y > 0.999) {
+      isLerping = false;
+      return;
+    }
+
+    requestAnimationFrame(lerp);
+  }
+
+  function handlePointerMove({ clientX, clientY }) {
+    targetPosition.x = clientX;
+    targetPosition.y = clientY;
+    
+    if (!isLerping) {
+      isLerping = true;
+      lerp();
+    }
+  }
+
+  document.addEventListener('pointermove', handlePointerMove);
+}

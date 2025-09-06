@@ -1,7 +1,8 @@
 .nav-wrapper {
-  display: flex;
-  margin-top: calc(var(--space-1) * 7);
-  justify-content: center;
+  position: fixed;
+  top: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
 
   li, ol {
     margin: 0;
@@ -19,7 +20,7 @@
   }
 
   li {
-    padding: var(--space-2) var(--space-4);
+    padding: var(--space-2) var(--space-3);
     border: 1px solid transparent;
     border-radius: 100px;
   }
