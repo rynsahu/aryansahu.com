@@ -14,7 +14,7 @@ export function followPointer(pointerEl, speed) {
     pointerEl.style.setProperty('--y', currentPosition.y);
     pointerEl.style.setProperty('transform', 'translate(calc(var(--x) * 1px - 50%), calc(var(--y) * 1px - 50%))');
 
-    if (currentPosition.x / targetPosition.x > 0.999 && currentPosition.y / targetPosition.y > 0.999) {
+    if (currentPosition.x / targetPosition.x > 0.99999 && currentPosition.y / targetPosition.y > 0.99999) {
       isLerping = false;
       return;
     }
