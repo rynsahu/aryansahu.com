@@ -13,3 +13,14 @@ body {
   margin: 0;
   background-color: #F4F4F4;
 }
+
+.pointer-follower {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background-color: rgba(253, 138, 113, 0.2);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(5rem);
+}
