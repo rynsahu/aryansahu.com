@@ -1,0 +1,12 @@
+.container {
+  height: 100vh;
+
+  .pointer {
+    position: absolute;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 217, 255, 0.7);
+  }
+}
