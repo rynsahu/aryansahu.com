@@ -1,44 +1,70 @@
 .container {
+  --slider-hight: 5px;
+  --slider-width: 300px;
+  --slider-color: rgb(255, 89, 0);
+  --slider-color-temp: greenyellow;
+
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  .progressbar {
-    --bar-hight: 5px;
-    --bar-width: 300px;
-    --bar-color: rgb(255, 89, 0);
-    --bar-color-temp: greenyellow;
+  .diamond-slider-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 400px;
+    padding: var(--space-8) calc(var(--space-1) * 12);
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
 
-    border: 1px solid var(--bar-color);
-    height: var(--bar-hight);
-    width: var(--bar-width);
-    border-radius: var(--bar-hight);
+    header h2 span {
+      font-weight: 300;
+    }
 
-    .progress-state {
-      position: relative;
-      background-color: var(--bar-color);
-      border-radius: var(--bar-hight);
-      width: calc(var(--state, 0) * 1%);
-      height: var(--bar-hight);
+    .quantity {
+      margin-top: var(--space-2);
+    }
 
-      .grabber {
-        position: absolute;
-        right: 0;
-        top: -100%;
-        height: calc(var(--bar-hight) + 10px);
-        width: calc(var(--bar-hight) + 10px);
-        background-color: var(--bar-color);
-        border-radius: 50%;
-        border: 1px solid red;
-        transition-property: opacity;
-        transition-duration: 0.1s;
-        cursor: grab;
+    .slider {
+      margin: var(--space-10) 0 var(--space-4) 0;
+      
+      #slider-input {
+        width: 100%;
+      }
+    }
+
+    .total, .addToCart {
+      text-align: right;
+    }
+
+    .total {
+      font-size: 1.75rem;
+    }
+  }
+
+  .addToCart {
+    .cta {
+      padding: var(--space-4);
+      border: none;
+      border-radius: 8px;
+      background-color: rgb(35, 35, 35);
+      color: white;
+      font-size: 0.75rem;
+      box-shadow: 0 0.5rem 2rem 0 rgba(15, 15, 15, 0.3);
+      cursor: pointer;
+      transform: scale(1);
+      transition-property: box-shadow, transform;
+      transition-duration: 0.2s;
+
+      &:hover {
+        box-shadow: none;
       }
 
-      .grabber:active {
-        cursor: grabbing;
+      &:active {
+        transform: scale(0.95);
       }
     }
   }

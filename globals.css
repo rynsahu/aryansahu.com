@@ -6,12 +6,20 @@
   --space-4: calc(var(--space-1) * 4);
   --space-5: calc(var(--space-1) * 5);
   --space-6: calc(var(--space-1) * 6);
+  --space-7: calc(var(--space-1) * 7);
+  --space-8: calc(var(--space-1) * 8);
+  --space-9: calc(var(--space-1) * 9);
+  --space-10: calc(var(--space-1) * 10);
 }
 
 body {
   font-size: var(--text-base);
   margin: 0;
   background-color: #F4F4F4;
+}
+
+p, h1, h2 {
+  margin: 0;
 }
 
 .pointer-follower {
@@ -35,5 +43,6 @@ body {
   p {
     padding: 0 var(--space-2);
     text-align: center;
+    margin: var(--space-5) 0;
   }
 }

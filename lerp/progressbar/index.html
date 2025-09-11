@@ -13,7 +13,7 @@
   <!-- END -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aryan Sahu | Progressbar</title>
+  <title>Aryan Sahu | Diamond Slider</title>
   <link rel="stylesheet" href="../../globals.css">
   <link rel="stylesheet" href="../../components/header/style.css">
   <link rel="stylesheet" href="./style.css" />
@@ -23,9 +23,23 @@
     <div id="navbar"></div>
 
     <main class="container">
-      <div class="progressbar">
-        <div class="progress-state" style="--state: 20">
-          <div class="grabber"></div>
+      <div class="diamond-slider-card">
+        <header>
+          <h2>Diamond Frame <span>Slider</span></h2>
+        </header>
+
+        <p class="quantity">Quantity: <span>0</span></p>
+
+        <div class="slider">
+          <input type="range" id="slider-input" min="0" max="100" value="0" step="0.5" />
+        </div>
+        
+        <div class="total">
+          <output class="price">₹ 0.00</output>
+        </div>
+        
+        <div class="addToCart">
+          <button class="cta">Add to Cart</button>
         </div>
       </div>
     </main>
