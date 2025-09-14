@@ -37,15 +37,9 @@ export function progressbar() {
   function handleThumbDown({ clientX }) {
     pinterCurrentXPosition = clientX;
     thumbCurrentXPosition = thumb.getBoundingClientRect().x;
-
-    requestAnimationFrame(() => {
-      thumbDx = thumbDx + (pinterCurrentXPosition - thumbCurrentXPosition) * 0.5;
-      console.log('IN_', thumbDx);
-      requestAnimationFrame(() => {
-        console.log('OUT_', thumbDx);
-        thumb.style.setProperty('--t', thumbDx);
-      })
-    })
+    console.log({thumbDx})
+    thumbDx += pinterCurrentXPosition - thumbCurrentXPosition;
+    thumb.style.setProperty('--t', thumbDx);
     
     window.addEventListener('pointermove', handlePointerMove);
     window.addEventListener('mouseup', handleThumbUp);
