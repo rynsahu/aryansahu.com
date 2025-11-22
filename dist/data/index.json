@@ -1,0 +1,1 @@
+{"title":"Counter Page","content":"<div><h1>Interactive Counter</h1><p>Count: <!-- -->0</p><button>Increment</button><button>Reset</button><hr/><input type=\"text\" placeholder=\"Enter your name\" value=\"\"/><p>Hello, <!-- -->stranger<!-- -->!</p></div>","navLabel":"Counter"}

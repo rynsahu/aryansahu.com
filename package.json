@@ -1,0 +1,42 @@
+{
+  "name": "aryansahu.com",
+  "version": "1.0.0",
+  "description": "Aryan Sahu personal website, blog and portfolio.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:pareseJsx": "npx rollup -c rollup.config.js",
+    "build:htmlPages": "node build.js",
+    "build:hydrate": "npx rollup -c rollup.config.browser.js",
+    "build": "npm run build:pareseJsx && npm run build:htmlPages && npm run build:hydrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rynsahu/aryansahu.com.git"
+  },
+  "keywords": [
+    "Blog",
+    "Portfolio",
+    "Personal website"
+  ],
+  "author": "Aryan Sahu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rynsahu/aryansahu.com/issues"
+  },
+  "homepage": "https://github.com/rynsahu/aryansahu.com#readme",
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "@rollup/plugin-babel": "^6.1.0",
+    "rollup": "^4.52.3"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-replace": "^6.0.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
