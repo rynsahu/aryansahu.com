@@ -4,9 +4,9 @@ import React from "react";
     async function hydrate() {
         const modules = {
             "about": () => import("../dist-build/components/about.js"),
-            "index": () => import("../dist-build/components/index.js"),
-            "postsfirstpost": () => import("../dist-build/components/posts/first-post.js"),
-            "postssecoundpost": () => import("../dist-build/components/posts/secound-post.js"),
+"index": () => import("../dist-build/components/index.js"),
+"postsfirstpost": () => import("../dist-build/components/posts/first-post.js"),
+"postssecoundpost": () => import("../dist-build/components/posts/secound-post.js"),
         };
 
         const moduleName = getFileNameFromPathmame();

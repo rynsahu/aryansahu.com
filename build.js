@@ -113,13 +113,14 @@ function layout({ title, content, pages }) {
                 nav { margin-bottom: 20px; }
                 nav a { margin-right: 15px; }
             </style>
+            <script defer src="/hydrate.js" type="module"></script>
+            <script defer src="/client.js"></script>
         </head>
         <body>
             <nav>
                 ${navLinks}
             </nav>
             <main>${content}</main>
-            <script src="/hydrate.js" type="module"></script>
         </body>
     </html>
     `.trim();

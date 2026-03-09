@@ -4,7 +4,7 @@ import replace from "@rollup/plugin-replace";
 import babel from "@rollup/plugin-babel";
 
 export default {
-    input: "src/hydrate.jsx",
+    input: ["src/hydrate.jsx", "src/client.js"],
     output: {
         dir: "dist",
         format: "esm",
