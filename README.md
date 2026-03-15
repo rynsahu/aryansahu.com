@@ -1,2 +1,0 @@
-# aryansahu.com
-Personal portfolio
