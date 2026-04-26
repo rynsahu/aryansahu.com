@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import path, { dirname } from "node:path";
@@ -6,7 +7,7 @@ import { readFileSync } from "node:fs";
 
 async function createServer() {
     const app = express();
-    const PORT = 5173;
+    const PORT = process.env.PORT || 5173;
 
     const __dirname = dirname(fileURLToPath(import.meta.url));
     const isProduction = process.env.NODE_ENV === 'production'
