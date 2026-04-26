@@ -25,8 +25,7 @@ export default function Home() {
                    When I'm not at my desk, I'm usually reading about AI, tinkering with LLMs, or thinking about frontend architecture problems I didn't ask for.
                 </p>
                 <p>
-                    Currently exploring new opportunities. If you're building something ambitious, I'd love to 
-                    <Link to="https://drive.google.com/file/d/19WE5z87FSaUzhyZCCcRBgiPe-JOP1oOT/view?usp=sharing" target="_blank" className="color-primary underline"> talk</Link>.
+                    Currently exploring new opportunities. If you're building something ambitious, I'd love to <Link to="https://drive.google.com/file/d/19WE5z87FSaUzhyZCCcRBgiPe-JOP1oOT/view?usp=sharing" target="_blank" className="color-primary underline">talk</Link>.
                 </p>
             </Paragraph>
 
@@ -39,7 +38,7 @@ export default function Home() {
                         heading='Glance'
                         subHeading='SDE 2 → SDE 3 · Jul 2022 - Present'
                         icon={glanceIcon}
-                        text={'Grew from building features to owning the entire frontend of Roposo Clout — architecture, performance, code review and team. Pushed an 80% improvement in Core Web Vitals, set up CI/CD with security checks, and mentored juniors while keeping the product moving.'}
+                        text={'Grew from building features to owning the entire frontend of Roposo Clout architecture, performance, code review and team. Pushed an 80% improvement in Core Web Vitals, set up CI/CD with security checks, and mentored juniors while keeping the product moving.'}
                     />
                     <InfoCard
                         direction="col"
@@ -53,7 +52,7 @@ export default function Home() {
                         heading='Thidiff'
                         subHeading='Software Developer · Dec 2019 - Mar 2021'
                         icon={thidiffIcon}
-                        text={'My first full-stack role — built RESTful APIs, developed reusable React components, and integrated third-party APIs (Trello, Shopify, BlueJeans). Shipped weekly with QA collaboration.'}
+                        text={'My first full-stack role built RESTful APIs, developed reusable React components, and integrated third-party APIs (Trello, Shopify, BlueJeans). Shipped weekly with QA collaboration.'}
                     />
                 </div>
             </BlockContent>
@@ -71,8 +70,10 @@ export default function Home() {
                             <div className="flex flex-col gap-2">
                                 <p>
                                     Took full ownership of the frontend from early stages not just building features but making architectural decisions, 
-                                    setting standards, and keeping the codebase maintainable as the product scaled. The impact that mattered most: an 80% 
-                                    improvement in Core Web Vitals, real-time analytics integrated end to end, and a deployment pipeline that actually gave 
+                                    setting standards, and keeping the codebase maintainable as the product scaled. 
+                                </p>
+                                <p>
+                                    The impact that mattered most: an 80% improvement in Core Web Vitals, real-time analytics integrated end to end, and a deployment pipeline that actually gave 
                                     the team confidence to ship.
                                 </p>
                                 <p>
@@ -91,10 +92,12 @@ export default function Home() {
                                 <p>
                                     Built both the frontend and backend for a meeting and collaboration platform designed the API layer in Express, 
                                     wired up PostgreSQL with Sequelize ORM, and delivered the full React frontend with role-based access control and a 
-                                    BlueJeans API integration for in-app meeting scheduling. Early in my career but one of the first times I saw the 
-                                    full picture from database to UI and understood how decisions on one end ripple through the other.
+                                    BlueJeans API integration for in-app meeting scheduling.
                                 </p>
-
+                                <p>
+                                    Early in my career but one of the first times I saw the full picture from database to UI and understood 
+                                    how decisions on one end ripple through the other.
+                                </p>
                                 <p>
                                     <b>Stack:</b> React · Redux · Express · Node.js · PostgreSQL · Material UI · AWS S3 · Sequelize ORM · Heroku
                                 </p>
