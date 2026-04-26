@@ -136,7 +136,7 @@ h1,h2,h3,h4,p,a {
 }
 
 .underline, .hover_underline:hover {
-    text-decoration: underline;
+    text-decoration: underline dotted;
 }
 
 .font-medium {
@@ -233,7 +233,7 @@ h1,h2,h3,h4,p,a {
 
 /* Custom classes */
 .container {
-    max-width: 42rem;
+    max-width: 40rem;
     margin: 0 auto;
 }
 

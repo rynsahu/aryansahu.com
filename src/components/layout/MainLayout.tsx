@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router";
+import { Link, NavLink, Outlet } from "react-router";
 import profilePhone from '../../assests/aryan-sahu-profile.jpeg';
 import signatureDark from '../../assests/signature-dark.png';
 import Divider from "../Divider";
@@ -15,9 +15,9 @@ export default function MainLayout() {
                 </h1>
                 {/* Navigation */}
                 <nav className="flex items-center gap-4">
-                    <Link to="/">Home</Link>
-                    <Link to="/inspiration">Inspiration</Link>
-                    <Link to="/blog">Blog</Link>
+                    <NavLink className={({ isActive }) => isActive ? 'color-primary underline' : 'color-tertiary'} to="/">Home</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'color-primary underline' : 'color-tertiary'} to="/inspiration">Inspiration</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'color-primary underline' : 'color-tertiary'} to="/blog">Blog</NavLink>
                 </nav>
             </header>
 
@@ -31,8 +31,8 @@ export default function MainLayout() {
             <footer className="flex flex-col items-center gap-4 text-sm color-quaternary mb-2">
                 <img src={signatureDark} width={200} />
                 <div className="text-center">
-                    <p>Built by yours truly. Here's the <Link to="https://github.com/rynsahu/aryansahu.com" target="_blank" className="color-primary hover_underline">code</Link>.</p>
-                    <p>Website heavily inspired by <Link to="https://www.designerdada.com" target="_blank" rel="noopener noreferrer" className="color-primary hover_underline">Akash Bhadange</Link></p>
+                    <p>Built by yours truly. Here's the <Link to="https://github.com/rynsahu/aryansahu.com" target="_blank" className="color-primary underline">code</Link>.</p>
+                    <p>Website heavily inspired by <Link to="https://www.designerdada.com" target="_blank" rel="noopener noreferrer" className="color-primary underline">Akash Bhadange</Link></p>
                 </div>
             </footer>
         </div>

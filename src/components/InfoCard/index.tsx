@@ -16,7 +16,7 @@ interface InfoCardPros {
 function Card({ children, link, className='' }: { children: ReactNode; link: string; className?: string }) {
     if (link) {
         return (
-            <Link to={link} className={className}>{children}</Link>
+            <Link to={link} className={className} target="_blank" rel="noopener noreferrer">{children}</Link>
         );
     }
 

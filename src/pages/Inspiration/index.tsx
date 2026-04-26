@@ -6,34 +6,34 @@ export default function Inspiration() {
     return (
         <PageContainer className="gap-8">
             <Paragraph>
-                <p>A list of all the people that I look up to, websites that I admire, tools that I use and everything else that follows.</p>
+                <p>A list of all the people that I look up to, websites that I admire, tools that I use, videos that I watch and everything else that follows.</p>
                 <p>I will keep on updating this list as I find more inspiration.</p>
             </Paragraph>
 
             <section className="flex flex-col gap-4">
                 <InfoCard
-                    link="/"
-                    heading="Posthog"
-                    icon="https://www.google.com/s2/favicons?domain=posthog.com&sz=48"
-                    text="Analytics tool that has made my life so much easier."
+                    link="https://frontendmasters.com"
+                    heading="Frontend Masters"
+                    icon="https://www.google.com/s2/favicons?domain=frontendmasters.com/&sz=48"
+                    text="Learn from experts"
                 />
                 <InfoCard
-                    link="/"
-                    heading="Clay"
-                    icon="https://www.google.com/s2/favicons?domain=me.sh&sz=48"
-                    text="Top notch product & website design"
+                    link="https://code.claude.com"
+                    heading="Claude Code"
+                    icon="https://www.google.com/s2/favicons?domain=code.claude.com&sz=48"
+                    text="AI tool I use"
                 />
                 <InfoCard
-                    link="/"
-                    heading="Anthropic"
-                    icon="https://www.google.com/s2/favicons?domain=anthropic.com&sz=48"
-                    text="AI Company i trust"
+                    link="https://www.youtube.com/@syntaxfm"
+                    heading="Syntax.fm"
+                    icon="https://www.google.com/s2/favicons?domain=Syntax.fm&sz=48"
+                    text="The web dev podcast I watch to stay current."
                 />
                 <InfoCard
-                    link="/"
-                    heading="Hugeicons"
-                    icon="https://www.google.com/s2/favicons?domain=hugeicons.com&sz=48"
-                    text="Using these icons in all of my projects"
+                    link="https://www.youtube.com/@campusx-official"
+                    heading="CampusX"
+                    icon="https://www.google.com/s2/favicons?domain=learnwith.campusx.in/&sz=48"
+                    text="The channel I watch to go deep on AI and ML concepts."
                 />
             </section>
         </PageContainer>
