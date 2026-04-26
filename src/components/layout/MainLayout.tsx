@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router";
 import profilePhone from '../../assests/aryan-sahu-profile.jpeg';
+import signatureDark from '../../assests/signature-dark.png';
 import Divider from "../Divider";
 
 export default function MainLayout() {
@@ -28,9 +29,9 @@ export default function MainLayout() {
             <Divider />
 
             <footer className="flex flex-col items-center gap-4 text-sm color-quaternary mb-2">
-                <p className="text-2xl color-primary font-bold">Aryan Sahu</p>
+                <img src={signatureDark} width={200} />
                 <div className="text-center">
-                    <p>Built by yours truly. Here's the <Link to="https://github.com/rynsahu" className="color-primary hover_underline">code</Link>.</p>
+                    <p>Built by yours truly. Here's the <Link to="https://github.com/rynsahu/aryansahu.com" target="_blank" className="color-primary hover_underline">code</Link>.</p>
                     <p>Website heavily inspired by <Link to="https://www.designerdada.com" target="_blank" rel="noopener noreferrer" className="color-primary hover_underline">Akash Bhadange</Link></p>
                 </div>
             </footer>
