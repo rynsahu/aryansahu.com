@@ -21,6 +21,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "npm run build:client && npm run build:server",
+    "vercel-build": "npm run build",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.tsx",
     "preview": "NODE_ENV=production node server.js",
