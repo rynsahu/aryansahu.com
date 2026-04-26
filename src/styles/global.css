@@ -1,0 +1,245 @@
+:root {
+    --font-nunito: "Nunito Sans", sans-serif;
+    --font-primer: "IM Fell Great Primer", serif;
+    --font-monospace: "Space Mono", monospace;
+
+    /* Color */
+    --color-stone-800: #292524;
+    --color-fade: #e5e5e5;
+    --color-bg: #fafaf9;
+
+    --color-primary: #57534d;
+    --color-secondary: #79716b;
+    --color-tertiary: color-mix(in oklab, var(--color-secondary) 70%, transparent);
+    --color-quaternary: color-mix(in oklab, var(--color-secondary) 50%, transparent);
+
+    /* Utility classes */
+    --text-size-diff: 0.0625rem; /* 1px */
+    --spacing: 0.25rem; /* 4px */ 
+
+    --text-base: 1rem;
+    --text-xs: calc(var(--text-base) - var(--text-size-diff) * 4);
+    --text-sm: calc(var(--text-base) - var(--text-size-diff) * 2);
+    --text-lg: calc(var(--text-base) + var(--text-size-diff) * 2);
+    --text-xl: calc(var(--text-base) + var(--text-size-diff) * 4);
+    --text-2xl: calc(var(--text-base) + var(--text-size-diff) * 8);
+}
+
+body {
+    font-family: var(--font-nunito);
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+    padding: 0;
+    margin: 0;
+    font-size: var(--text-base);
+}
+
+h1,h2,h3,h4,p,a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Utility classes */
+.color-primary, .hover_color-primary:hover {
+    color: var(--color-primary);
+}
+
+.color-secondary {
+    color: var(--color-secondary);
+}
+
+.color-tertiary {
+    color: var(--color-tertiary)
+}
+
+.color-quaternary {
+    color: var(--color-quaternary)
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.items-start{
+    align-items: start;
+}
+
+.items-end{
+    align-items: end;
+}
+
+/* Border */
+.rounded-sm {
+    border-radius: 6px;
+}
+
+.rounded-md {
+    border-radius: 8px;
+}
+
+.rounded-full {
+    border-radius: 100%;
+}
+
+.border-dotted {
+    border-top: 2.5px dotted var(--color-quaternary);
+}
+
+/* Font */
+.font-nunito {
+    font-family: var(--font-nunito);
+}
+
+.font-primer {
+    font-family: var(--font-primer) !important;
+}
+
+.font-monospace {
+    font-family: var(--font-monospace) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-xs {
+    font-size: var(--text-xs);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-base {
+    font-size: var(--text-base);
+}
+
+.text-2xl {
+    font-size: var(--text-2xl);
+}
+
+.text-nowrap {
+    text-wrap: nowrap;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.underline, .hover_underline:hover {
+    text-decoration: underline dotted;
+}
+
+.font-medium {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+/* Gaps */
+.gap {
+    gap: var(--spacing);
+}
+
+.gap-2 {
+    gap: calc(var(--spacing)*2);
+}
+
+.gap-3 {
+    gap: calc(var(--spacing)*3);
+}
+
+.gap-4 {
+    gap: calc(var(--spacing)*4);
+}
+
+.gap-6 {
+    gap: calc(var(--spacing)*6);
+}
+
+.gap-8 {
+    gap: calc(var(--spacing)*8);
+}
+
+/* Spacing */
+.py-10 {
+    padding-top: calc(var(--spacing)*10);
+    padding-bottom: calc(var(--spacing)*10);
+}
+
+.py-8 {
+    padding-top: calc(var(--spacing)*8);
+    padding-bottom: calc(var(--spacing)*8);
+}
+
+.px-4 {
+    padding-right: calc(var(--spacing)*4);
+    padding-left: calc(var(--spacing)*4);
+}
+
+.mt-4 {
+    margin-top: calc(var(--spacing)*4);;
+}
+
+.mb-2 {
+    margin-bottom: calc(var(--spacing)*2);;
+}
+
+.mb-6 {
+    margin-bottom: calc(var(--spacing)*6);;
+}
+
+.my-8 {
+    margin-top: calc(var(--spacing)*8);
+    margin-bottom: calc(var(--spacing)*8);
+}
+
+.my-10 {
+    margin-top: calc(var(--spacing)*10);
+    margin-bottom: calc(var(--spacing)*10);
+}
+
+/* Width */
+.w-full {
+    width: 100%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.shadow-1 {
+    box-shadow: 0 0 #0000, 0 0 #0000, inset 0 0 0 2px #737373, inset 0 0 0 3px #ffffff33, 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+}
+
+.shadow-2 {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0.1) 0px 0px 0px 1px, oklab(0 0 0 / 0.1) 0px 1px 3px 0px, oklab(0 0 0 / 0.1) 0px 1px 2px -1px;
+}
+
+/* Custom classes */
+.container {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.dot {
+    min-width: 4px;
+    min-height: 4px;
+    border-radius: 100%;
+    background-color: var(--color-fade);
+}
