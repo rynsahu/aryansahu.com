@@ -25,6 +25,21 @@
     --text-2xl: calc(var(--text-base) + var(--text-size-diff) * 8);
 }
 
+[data-theme="dark"] {
+   /* Backgrounds — deep cool blue-grey, not harsh black */
+  --color-bg: #0f1117;          /* deep blue-tinted dark */
+  --color-fade: #1a1d27;        /* slightly lighter surface */
+
+  /* Text */
+  --color-primary: #dde3f0;     /* soft cool white, easy on eyes */
+  --color-secondary: #8b96b0;   /* muted slate-blue */
+  --color-tertiary: color-mix(in oklab, var(--color-secondary) 90%, transparent);
+  --color-quaternary: color-mix(in oklab, var(--color-secondary) 80%, transparent);
+
+  /* Accent */
+  --color-stone-800: #2a2f45;   /* cool blue-grey, for borders/dividers */
+}
+
 body {
     font-family: var(--font-nunito);
     color: var(--color-primary);

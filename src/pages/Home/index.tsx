@@ -9,6 +9,7 @@ import terminalIcon from "../../assests/icons/terminal.svg";
 import BlockContent from "../../components/BlockContent";
 import PageContainer from "../../components/PageContainer";
 import Paragraph from "../../components/Paragraph";
+import { Link } from "react-router";
 
 export default function Home() {
     return (
@@ -24,7 +25,8 @@ export default function Home() {
                    When I'm not at my desk, I'm usually reading about AI, tinkering with LLMs, or thinking about frontend architecture problems I didn't ask for.
                 </p>
                 <p>
-                    Currently exploring new opportunities. If you're building something ambitious, I'd love to talk.
+                    Currently exploring new opportunities. If you're building something ambitious, I'd love to 
+                    <Link to="https://drive.google.com/file/d/19WE5z87FSaUzhyZCCcRBgiPe-JOP1oOT/view?usp=sharing" target="_blank" className="color-primary underline"> talk</Link>.
                 </p>
             </Paragraph>
 
@@ -106,7 +108,7 @@ export default function Home() {
 
             <BlockContent heading="Work with me">
                 <InfoCard
-                    link="/"
+                    link="https://drive.google.com/file/d/19WE5z87FSaUzhyZCCcRBgiPe-JOP1oOT/view?usp=sharing"
                     iconShadow="shadow-1"
                     headerWrapperClass="gap-4"
                     heading="Hire me"
