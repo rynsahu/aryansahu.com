@@ -41,7 +41,7 @@ h1,h2,h3,h4,p,a {
 }
 
 /* Utility classes */
-.color-primary {
+.color-primary, .hover_color-primary:hover {
     color: var(--color-primary);
 }
 
@@ -127,11 +127,15 @@ h1,h2,h3,h4,p,a {
     font-size: var(--text-2xl);
 }
 
+.text-nowrap {
+    text-wrap: nowrap;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
 
-.underline, .hover-underline:hover {
+.underline, .hover_underline:hover {
     text-decoration: underline;
 }
 
