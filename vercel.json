@@ -1,6 +1,7 @@
 {                                                                                                                                                                                      
-    "builds": [                                             
-        { "src": "server.js", "use": "@vercel/node" }
+    "buildCommand": "npm run build",
+    "builds": [
+        { "src": "server.js", "use": "@vercel/node", "config": { "includeFiles": ["dist/**"] } }
     ],                                                                                                                                                                                   
     "routes": [                                                                                                                                                                          
         { "src": "/(.*)", "dest": "server.js" }                                                                                                                                            
