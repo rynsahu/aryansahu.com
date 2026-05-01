@@ -11,23 +11,24 @@ interface InfoCardPros {
     className?: string;
     headerWrapperClass?: string;
     link?: string;
+    onClick?: () => void;
 }
 
-function Card({ children, link, className='' }: { children: ReactNode; link: string; className?: string }) {
+function Card({ children, link, className='', onClick }: { children: ReactNode; link: string; className?: string; onClick?: () => void }) {
     if (link) {
         return (
-            <Link to={link} className={className} target="_blank" rel="noopener noreferrer">{children}</Link>
+            <Link to={link} className={className} target="_blank" rel="noopener noreferrer" onClick={onClick}>{children}</Link>
         );
     }
 
     return <div className={className}>{children}</div>
 }
 
-export default function InfoCard({ direction='row', heading, icon, text, className='', subHeading, headerWrapperClass='', iconShadow='', link='' }: InfoCardPros) {
+export default function InfoCard({ direction='row', heading, icon, text, className='', subHeading, headerWrapperClass='', iconShadow='', link='', onClick }: InfoCardPros) {
     const shadow = iconShadow ? iconShadow : link ? 'shadow-2' : 'shadow-1'
 
     return (
-        <Card link={link} className={`flex ${direction === 'col' ? 'flex-col gap-3' : 'gap-2 items-center'} text-sm ${className}`}>
+        <Card link={link} className={`flex ${direction === 'col' ? 'flex-col gap-3' : 'gap-2 items-center'} text-sm ${className}`} onClick={onClick}>
             {/* header */}
             <div className={`flex ${subHeading ? "items-start" : "items-center"} gap-2 ${headerWrapperClass}`}>
                 <img src={icon} alt={heading} width={32} height={32} className={`rounded-sm overflow-hidden ${shadow}`} />

@@ -10,8 +10,11 @@ import BlockContent from "../../components/BlockContent";
 import PageContainer from "../../components/PageContainer";
 import Paragraph from "../../components/Paragraph";
 import { Link } from "react-router";
+import { usePostHog } from "@posthog/react";
 
 export default function Home() {
+    const posthog = usePostHog();
+
     return (
         <PageContainer>
             <Paragraph>
@@ -25,7 +28,7 @@ export default function Home() {
                    When I'm not at my desk, I'm usually reading about AI, tinkering with LLMs, or thinking about frontend architecture problems I didn't ask for.
                 </p>
                 <p>
-                    Currently exploring new opportunities. If you're building something ambitious, I'd love to <Link to="https://drive.google.com/file/d/19WE5z87FSaUzhyZCCcRBgiPe-JOP1oOT/view?usp=sharing" target="_blank" className="color-primary underline">talk</Link>.
+                    Currently exploring new opportunities. If you're building something ambitious, I'd love to <Link to="https://drive.google.com/file/d/19WE5z87FSaUzhyZCCcRBgiPe-JOP1oOT/view?usp=sharing" target="_blank" className="color-primary underline" onClick={() => posthog?.capture('talk_link_clicked')}>talk</Link>.
                 </p>
             </Paragraph>
 
@@ -117,6 +120,7 @@ export default function Home() {
                     heading="Hire me"
                     icon={terminalIcon}
                     text="Let's build a world class website for your business."
+                    onClick={() => posthog?.capture('hire_me_clicked')}
                 />
             </BlockContent>
         </PageContainer>
